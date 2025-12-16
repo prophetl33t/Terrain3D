@@ -64,6 +64,12 @@ jobs:
             runner: ubuntu-22.04
             flags: threads=no
 
+          - identifier: web-threads
+            platform: web
+            name: 🌐 Web No-threads
+            runner: ubuntu-22.04
+            flags: threads=yes
+
     steps:
       - name: Checkout Terrain3D
         uses: actions/checkout@v4
