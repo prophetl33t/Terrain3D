@@ -29,14 +29,6 @@ jobs:
           cache-name: ${{ matrix.platform }}-nothreads-${{ matrix.target }}
         continue-on-error: true
 
-      - name: Build Terrain3D
-        env:
-            SCONS_CACHE: "${{ github.workspace }}/.scons-cache/"
-            TARGET: 'template_${{ matrix.target }}'
-        shell: sh
-        run: |
-          scons target=$TARGET platform='${{ matrix.platform }}' threads=no debug_symbols=no -j2
-
       - name: Build Terrain3D Threaded
         env:
             SCONS_CACHE: "${{ github.workspace }}/.scons-cache/"
