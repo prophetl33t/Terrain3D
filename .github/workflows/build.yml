@@ -66,7 +66,7 @@ jobs:
 
           - identifier: web-threads
             platform: web
-            name: 🌐 Web No-threads
+            name: 🌐 Web threads
             runner: ubuntu-22.04
             flags: threads=yes
 
